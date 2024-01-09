@@ -21,8 +21,8 @@ export default function ColorRenderer () {
   return (
     <>
       {
-        colors.map(({hex, name}) => {
-          return <Color hex={hex} name={name} />
+        colors.map(({hex, name, i}) => {
+          return <Color key={`${i}-${hex}`} hex={hex} name={name} />
         })
       }
     </>
